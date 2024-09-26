@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: "Kalam", cursive;
+    background-color: #f0f8ff;
+    color: #333;
+    padding-top: 100px; /* Agrega espacio suficiente en la parte superior para evitar que el contenido quede oculto detrás del encabezado */
+}
+
+
+
+
+/* Encabezado */
+/* Encabezado */
+.main-header {
+    background-color:  #79b8a4;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fija el encabezado en la parte superior */
+    top: 0; /* Alinea el encabezado al borde superior */
+    left: 0; /* Alinea el encabezado al borde izquierdo */
+    right: 0; /* Alinea el encabezado al borde derecho */
+    z-index: 1000; /* Asegura que el encabezado esté por encima de otros elementos */
+}
+/*    font-family: "Gochi Hand", cursive;*/
+.logo H1{
+    font-family: "Rubik Wet Paint", system-ui;
+    font-size: 80px;
+    color: #f9f9f9;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+/* Contenedor para el ícono de ubicación y el botón de inicio */
+.floating-container {
+    position: flex;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 1rem; /* Espacio entre el ícono y el botón */
+    z-index: 1000; /* Asegura que el contenedor esté por encima de otros elementos */
+}
+
+/* Estilo para el ícono de ubicación */
+.location-icon {
+    background-color: #79b8a4; /* Color de fondo */
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+.location-icon:hover {
+    color:  #79b8a4;
+    background-color: white; /* Cambia el color de fondo al pasar el ratón */
+    transform: scale(1.1);
+}
+
+/* Estilo para el botón de inicio */
+.start-button {
+    font-family: "Nerko One", cursive;
+    background-color: #79b8a4; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    text-decoration: none;
+    font-size: 40px;
+    padding: 0.5rem 1rem; /* Espaciado alrededor del texto */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: white; /* Cambia el color de fondo al pasar el ratón */
+    color:  #79b8a4;/* Cambia el color del texto al pasar el ratón */
+    transform: scale(1.05); /* Agranda el botón ligeramente al pasar el ratón */
+}
+
+
+
+
+
+
+
+
+/* Sección de bienvenida */
+/* Sección de bienvenida */
+.welcome-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #e0f7fa;
+
+}
+
+.welcome-text h1 {
+    font-family: "Nerko One", cursive;
+    font-size: 100px;
+    color: #79b8a4; 
+   
+}
+
+.welcome-text p {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.welcome-text .btn-primary { 
+    font-family: "Nerko One", cursive;
+    font-size: 50px;
+    padding: 10px 20px;
+    background-color: #79b8a4; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.welcome-text .btn-primary:hover {
+    background-color:  #79b8a4; 
+}
+
+.welcome-video video {
+    width: 350px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sección de Servicios */
+/* Sección de Servicios */
+
+.services-section {
+    padding: 50px 80px;
+    background-color: #fff;
+}
+
+.services-section h2 { 
+    font-family: "Nerko One", cursive;
+    font-size: 100px;
+    text-align: center;
+    color: #79b8a4; 
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.service-container {
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-basis: 30%;
+    margin-bottom: 60px;
+    transition: transform 0.9s;
+    border: 3px solid #79b8a4; ;
+}
+
+
+.service-card:hover {
+    transform: translateY(-15px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.service-card h3 {
+    font-family: "Nerko One", cursive;
+    font-size: 50px;
+    color:  #79b8a4; 
+    margin: 15px  0 10px;
+    text-align: center;
+}
+
+.service-card p {
+    font-size: 30px;
+    padding: 0 15px 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* Sección de Galería */
+.gallery-section {
+    padding: 50px 80px;
+    background-color: #e0f7fa;
+}
+
+.gallery-section h2 {
+    font-family: "Nerko One", cursive;
+    font-size: 100px;
+    text-align: center;
+    color: #79b8a4; 
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: 2PX 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-basis: 30%;
+    margin-bottom: 60px;
+    transition: transform 0.9s; 
+    border: 3px solid  #79b8a4;  
+}
+
+.gallery-item:hover {
+    transform: translateY(-20px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+   
+}
+
+.gallery-description {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.gallery-description h3 { 
+    font-family: "Nerko One", cursive;   
+    font-size: 50px;
+    text-align: center;
+    margin: 0;
+    color:  #79b8a4; 
+}
+
+.gallery-description p {
+    margin: 10px 0 0;
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+/* Sección de Testimonios */
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.testimonials-section h2 {
+    font-family: "Nerko One", cursive;
+    font-size: 100px;
+    text-align: center;
+    color:#79b8a4; 
+    margin-bottom: 30px;
+
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+ 
+    
+
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-basis: 30%;   
+    border: 3px solid#79b8a4; 
+}
+
+.testimonial p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.testimonial h3 {
+    font-size: 30px;
+    margin-top: 15px;
+    color:  #79b8a4; 
+}
+
+
+
+
+
+/* Sección de Contacto */
+.contact-section {
+    padding: 50px 80px;
+    background-color: #e0f7fa;
+}
+
+.contact-section h2 {
+    font-family: "Nerko One", cursive;
+    font-size: 100px;
+    color: #79b8a4;
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex-basis: 48%;
+    width: 100%;
+}
+
+.contact-info p {
+    font-family: "Nerko One", cursi;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form textarea {
+    font-family: "Nerko One", cursi;
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 30px;
+    resize: none;
+}
+
+.contact-form button {
+    font-family: "Nerko One", cursi;
+    padding: 12px 25px;
+    background-color: #79b8a4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #66a893;
+}
+
+/* Pie de página */
+footer {
+    background-color: #79b8a4;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    font-family: "Nerko One", cursive;
+    font-size: 40px;
+    margin: 0.5rem 0;
+}
+
+.social-icons {
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 4rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e0e0e0;
+    transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Cambia a columna para móviles */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .welcome-section {
+        flex-direction: column; /* Alinea verticalmente el contenido */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .welcome-video video {
+        width: 100%; /* Asegura que el video ocupe todo el ancho en móviles */
+    }
+
+    .services-section, .gallery-section, .testimonials-section, .contact-section {
+        padding: 20px; /* Reduce el padding en móviles */
+    }
+
+    .service-container, .gallery-container, .testimonial-container, .contact-container {
+        flex-direction: column; /* Alinea en columna en lugar de filas */
+        gap: 20px;
+    }
+
+    .service-card, .gallery-item, .testimonial, .contact-info, .contact-form {
+        flex-basis: 100%; /* Ocupa el 100% del ancho disponible */
+    }
+
+    .service-card img, .gallery-item img {
+        height: auto; /* Permite que las imágenes se ajusten a diferentes alturas */
+    }
+
+    .contact-form textarea {
+        height: 150px; /* Reduce el tamaño del textarea en móviles */
+    }
+
+    footer {
+        padding: 1rem; /* Ajusta el padding del pie de página */
+    }
+
+    .social-icons a {
+        font-size: 1.5rem; /* Reduce el tamaño de los íconos sociales en móviles */
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar ul {
+        gap: 15px; /* Ajusta el espacio entre los elementos del menú */
+    }
+
+    .service-container, .gallery-container, .testimonial-container, .contact-container {
+        flex-direction: row; /* Mantén los elementos en fila */
+        gap: 15px; /* Reduce el espacio entre tarjetas en tablets */
+    }
+
+    .service-card, .gallery-item, .testimonial, .contact-info, .contact-form {
+        flex-basis: 48%; /* Ocupa el 48% del ancho en lugar de 30% */
+    }
+
+    .welcome-video video {
+        width: 75%; /* Ajusta el video en tablets */
+    }
+
+    footer {
+        padding: 1.2rem;
+    }
+}
+
+/* Estilos para computadoras de escritorio */
+@media (min-width: 1025px) {
+    .navbar ul {
+        gap: 20px; /* Aumenta el espacio entre los elementos del menú en escritorio */
+    }
+
+    .service-card, .gallery-item, .testimonial, .contact-info, .contact-form {
+        flex-basis: 30%; /* Vuelve a la distribución original */
+    }
+
+    .welcome-video video {
+        width: 350px; /* Mantiene el tamaño del video para pantallas grandes */
+    }
+}
